@@ -1,0 +1,170 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", serif;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header {
+    padding: 16px 0;
+    background-color: #ff8383ad;
+    color: #fffebe;
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 36px;
+}
+
+.menu li {
+    display: inline;
+    margin-left: 16px;
+    font-size: 1em;
+    list-style: none;
+    border-top: 4px solid transparent;
+}
+
+.menu li:hover {
+    border-color: #fffebe;
+}
+
+.menu li a {
+    color: #fffebe;
+    text-decoration: none;
+}
+
+.about {
+    margin-bottom: 32px;
+}
+
+.about article {
+    display: flex;
+    font-size: 1.5em;
+}
+
+.about img {
+    margin-right: 16px;
+    width: 100%;
+    max-height: 400px;
+}
+
+section h2 {
+    font-size: 1.5em;
+    color: #ff8383;
+    font-weight: bold;
+    margin-bottom: 16px;
+    border-bottom: #ff5252b2 solid 1px;
+}
+
+.product {
+    display: grid;
+    grid-template-columns: repeat(4, 24.5%);
+    column-gap: 1%;
+    row-gap: 5%;
+}
+
+.product img {
+    width: 100%;
+}
+
+.product h3 {
+    color: #ff8383;
+    font-weight: bold;
+}
+
+.product p {
+    margin-bottom: 8px;
+}
+
+.product button {
+    padding: 5px;
+    background-color: #fffebe;
+    color: #ff5252;
+    font-weight: bold;
+    border-color: #ff838370;
+    cursor: pointer;
+    width: 100%;
+}
+
+@media screen and (max-width: 640px) {
+    .conteudo {
+        display: block;
+    }
+
+    .container {
+        max-width: 90%;
+    }
+    
+    header .container {
+        flex-direction: column;
+        font-size: 0.8em;
+    }
+
+    .menu li {
+        margin-left: 0;
+        padding: 0 10px;
+        font-size: 0.6em;
+    }
+
+    .about article {
+        display: block;
+        font-size: 1em;
+    }
+
+    .product {
+        display: block;
+        max-width: 100%;
+    }
+
+
+    .product article {
+        margin-bottom: 16px;
+    }
+}
+
+@media screen and (min-width: 641px) and (max-width: 1023px) {
+    .container {
+        max-width: 90%;
+    }
+    
+    header {
+        font-size: 1.5em;
+    }
+
+    .about article {
+        display: block;
+    }
+
+    .about h3 {
+        font-size: 1em;
+    }
+
+    .about img {
+        width: 100%;
+        max-height: 500px;
+    }
+
+    .product {
+        display: grid;
+        grid-template-columns: repeat(2, 49%);
+        column-gap: 1%; 
+    }
+    
+    .list img, button {
+        width: 100%;
+    }
+    
+    .list p {
+        margin-bottom: 10px;
+    }
+}
